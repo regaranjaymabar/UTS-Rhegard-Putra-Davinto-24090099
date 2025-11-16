@@ -1,4 +1,4 @@
-# Proyek UTS Pemrograman Web - UTS-rhegard Putra Davinto-24090099
+# Proyek UTS Pemrograman Web - UTS-Rhegard Putra Davinto-24090099
 
 
 ### 1. Identitas Mahasiswa
