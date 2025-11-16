@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Product</title>
+  <link rel="stylesheet" href="style.css/products.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">
+            <img src="https://cdn-icons-png.flaticon.com/128/1946/1946488.png" 
+            alt="Home Icon" 
+            class="nav-icon" /> Dashboard</a>
+        </li>
+        <li><a href="#" class="active">
+            <img src="https://cdn-icons-png.flaticon.com/128/9083/9083261.png" 
+            alt="Products Icon" 
+            class="nav-icon" /> Products</a>
+        </li>
+        <li><a href="login.html" id="logoutLink">
+            <img src="https://cdn-icons-png.flaticon.com/128/1828/1828427.png"
+        alt="Logout" class="nav-icon">Logout</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <button id="menuToggle" class="hamburger-btn">&#9776;</button>
+    <header>
+      <h1>Data Product</h1>
+    </header>
+
+    <section>
+      <table id="productTable" class="product-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="productBody">
+         
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <div id="customAlert" class="alert hidden">
+    <div id="alertText"></div>
+    <div class="alert-buttons">
+    <button id="alertCancelBtn">Tidak</button>
+    <button id="alertConfirmBtn">OK</button>
+    </div>
+  </div>
+  <script src="script.js/products.js"></script>
+</body>
+</html>

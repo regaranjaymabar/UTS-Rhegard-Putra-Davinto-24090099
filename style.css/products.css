@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+
+.sidebar {
+  width: 220px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.icon-btn {
+  width: 20px;     
+  height: 20px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.sidebar nav ul li a {
+  margin-right: 12px;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  background-color: #646464;
+  color: white;
+  border-radius: 4px;
+}
+
+
+.main-content {
+  margin-left: 220px;
+  padding: 30px 40px;
+  flex-grow: 1;
+}
+
+.main-content header h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.product-table thead th {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.product-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.product-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.action-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  color: #000000;
+  transition: color 0.3s;
+}
+
+
+.action-btn:hover {
+  color: #007bff;
+}
+
+input[type="text"], input[type="number"] {
+  width: 90%;
+  padding: 6px 8px;
+  font-size: 1rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px; 
+  font-size: 26px;
+  background: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1200;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.sidebar {
+  transition: transform 0.3s ease;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-220px); 
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1100;
+    display: block !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding-top: 70px;
+  }
+}
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  padding: 20px 25px;
+  background: #616161ff;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  animation: fadeInScale 0.3s ease;
+  z-index: 3000;
+}
+
+.alert.hidden {
+  display: none;
+}
+
+.alert-buttons {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: center;
+}
+
+.alert button {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+#alertConfirmBtn {
+  background: #05be30ff;
+  color: #fff;
+}
+
+#alertConfirmBtn:hover {
+  background: #05be30ff;
+}
+
+#alertCancelBtn {
+  background: #6c757d;
+  color: #fff;
+}
+
+#alertCancelBtn:hover {
+  background: #5a6268;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
