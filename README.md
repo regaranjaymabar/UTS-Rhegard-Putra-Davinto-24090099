@@ -11,7 +11,7 @@
 ### 2. Link
 
 * **Link GitHub Repository:**
-    ``
+    `https://github.com/regaranjaymabar/UTS-Rhegard-Putra-Davinto-24090099`
 
 * **Link GitHub Pages (Aplikasi Online):**
      `https://regaranjaymabar.github.io/UTS-Rhegard-Putra-Davinto-24090099/login.html`
