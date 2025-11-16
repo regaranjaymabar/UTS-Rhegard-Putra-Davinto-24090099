@@ -14,7 +14,7 @@
     ``
 
 * **Link GitHub Pages (Aplikasi Online):**
-     ``
+     `https://regaranjaymabar.github.io/UTS-Rhegard-Putra-Davinto-24090099/login.html`
 
     
 
